@@ -1,10 +1,10 @@
-import Header from "@/components/ui/Header";
-import Hero from "@/components/ui/Hero";
-import Categories from "@/components/ui/Categories";
-import FeaturedProducts from "@/components/ui/FeaturedProducts";
-import About from "@/components/ui/About";
-import Newsletter from "@/components/ui/Newsletter";
-import Footer from "@/components/ui/Footer";
+import Header from "@/components/ui/Header.tsx";
+import Hero from "@/components/ui/Hero.tsx";
+import Categories from "@/components/ui/Categories.tsx";
+import FeaturedProducts from "@/components/ui/FeaturedProducts.tsx";
+import About from "@/components/ui/About.tsx";
+import Newsletter from "@/components/ui/Newsletter.tsx";
+import Footer from "@/components/ui/Footer.tsx";
 
 const Index = () => {
   return (
