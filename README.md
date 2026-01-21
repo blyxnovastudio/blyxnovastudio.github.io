@@ -1,50 +1,146 @@
-# Las Marianas
+# 🧉 Las Marianas - E-commerce Demo
 
-Sitio web de Las Marianas - Tu destino para productos de calidad.
+> **Proyecto Demo** - Sitio web ficticio de una tienda de mates, termos y artículos para regalar.
 
-## 🚀 Despliegue en GitHub Pages
+Proyecto de demostración de un e-commerce moderno para "Las Marianas", una tienda ficticia especializada en productos de mate argentino, termos, materas y artículos para regalo.
 
-Este proyecto está configurado para desplegarse automáticamente en GitHub Pages.
+🌐 **[Ver Demo en Vivo](https://blyxnovastudio.github.io/)**
 
-### Pasos para desplegar:
+---
 
-1. **Crear repositorio en GitHub:**
-   - Ve a [GitHub](https://github.com) y crea un nuevo repositorio
-   - Nombra el repositorio (ej: `las-marianas`)
+## 📋 Descripción
 
-2. **Subir el código:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-   git push -u origin main
-   ```
+Las Marianas es un sitio web de e-commerce desarrollado como proyecto demo que simula una tienda online real. El sitio incluye:
 
-3. **Configurar GitHub Pages:**
-   - Ve a Settings > Pages en tu repositorio
-   - En "Source", selecciona "GitHub Actions"
-   - El sitio se desplegará automáticamente en: `https://TU_USUARIO.github.io/TU_REPOSITORIO/`
+- ✨ Landing page con hero section personalizado
+- 🛍️ Catálogo de productos destacados
+- 🛒 Carrito de compras funcional con Zustand
+- 📝 Formulario de checkout con validación
+- 💰 Cálculo automático de envío (gratis sobre $50,000 ARS)
+- 📱 Diseño responsive y moderno
+- 🎨 UI/UX pulida con Tailwind CSS y shadcn/ui
+
+---
+
+## 🚀 Tecnologías
+
+Este proyecto está construido con tecnologías modernas:
+
+- **React 18.3** - Biblioteca UI
+- **TypeScript** - Tipado estático
+- **Vite 7** - Build tool y dev server
+- **Tailwind CSS** - Framework CSS utility-first
+- **shadcn/ui** - Componentes UI accesibles
+- **Zustand** - Estado global para el carrito
+- **React Router** - Navegación SPA
+- **Lucide React** - Iconos
+- **GitHub Actions** - CI/CD automático
+
+---
 
 ## 🛠️ Desarrollo Local
 
-Follow these steps:
+```bash
+# Clonar el repositorio
+git clone https://github.com/blyxnovastudio/blyxnovastudio.github.io.git
+cd blyxnovastudio.github.io
 
-```sh
-# Paso 1: Clonar o navegar al directorio del proyecto
-cd <NOMBRE_DEL_PROYECTO>
-
-# Paso 2: Instalar las dependencias
+# Instalar dependencias
 npm install
 
-# Paso 3: Iniciar el servidor de desarrollo
+# Iniciar servidor de desarrollo
 npm run dev
+
+# Abrir en http://localhost:8080
 ```
 
-## 📦 Tecnologías
+---
 
-Este proyecto está construido con:
+## 📦 Comandos Disponibles
+
+```bash
+npm run dev          # Servidor de desarrollo
+npm run build        # Build de producción
+npm run preview      # Preview del build
+npm run lint         # Linter ESLint
+npm run test         # Tests con Vitest
+npm run test:watch   # Tests en modo watch
+```
+
+---
+
+## 🎨 Características Principales
+
+### 🛒 Sistema de Carrito
+- Agregar/eliminar productos
+- Ajustar cantidades
+- Persistencia con localStorage
+- Cálculo automático de totales y envío
+
+### 📱 Diseño Responsive
+- Mobile-first approach
+- Adaptable a tablets y desktop
+- Navegación optimizada para touch
+
+### 🎯 UI/UX
+- Scroll suave entre secciones
+- Animaciones y transiciones fluidas
+- Feedback visual en interacciones
+- Componentes accesibles (a11y)
+
+---
+
+## 📄 Estructura del Proyecto
+
+```
+├── public/              # Archivos estáticos
+├── src/
+│   ├── assets/         # Imágenes y recursos
+│   ├── components/
+│   │   ├── pages/      # Páginas (Index, NotFound)
+│   │   ├── ui/         # Componentes UI reutilizables
+│   │   └── hooks/      # Custom hooks
+│   ├── stores/         # Zustand stores (carrito)
+│   ├── App.tsx         # Componente principal
+│   └── main.tsx        # Entry point
+├── .github/
+│   └── workflows/      # GitHub Actions (deployment)
+└── ...config files
+```
+
+---
+
+## 🚀 Despliegue
+
+El proyecto está configurado para desplegar automáticamente en GitHub Pages mediante GitHub Actions.
+
+Cada push a la rama `main` dispara:
+1. ✅ Build del proyecto
+2. ✅ Optimización de assets
+3. ✅ Deploy a GitHub Pages
+
+**URL de producción:** https://blyxnovastudio.github.io/
+
+---
+
+## 📝 Notas
+
+- Este es un **proyecto de demostración** con fines educativos
+- Los productos y precios son ficticios
+- No se procesan pagos reales
+- El formulario de checkout solo muestra una alerta de confirmación
+
+---
+
+## 👨‍💻 Autor
+
+**Blyx Nova Studio**
+
+---
+
+## 📜 Licencia
+
+Este proyecto es de código abierto y está disponible bajo una licencia permisiva para fines educativos y de demostración.
 
 - React 18
 - TypeScript
