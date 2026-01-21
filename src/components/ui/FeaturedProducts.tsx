@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Heart } from "lucide-react";
+import { useCartStore } from "@/stores/cartStore";
 import productMate from "@/assets/product-mate.jpg";
 import productTermo from "@/assets/product-termo.jpg";
 import productMatera from "@/assets/product-matera.jpg";
@@ -68,6 +69,19 @@ const formatPrice = (price: number) => {
 };
 
 const FeaturedProducts = () => {
+  const { addItem, toggleCart } = useCartStore();
+
+  const handleAddToCart = (product: typeof products[0]) => {
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      category: product.category,
+    });
+    toggleCart();
+  };
+
   return (
     <section id="productos" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -131,7 +145,7 @@ const FeaturedProducts = () => {
                       </span>
                     )}
                   </div>
-                  <Button size="sm" className="gap-2">
+                  <Button size="sm" className="gap-2" onClick={() => handleAddToCart(product)}>
                     <ShoppingCart className="h-4 w-4" />
                     <span className="hidden sm:inline">Agregar</span>
                   </Button>

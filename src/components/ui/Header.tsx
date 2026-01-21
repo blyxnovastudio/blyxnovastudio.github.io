@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCartStore } from "@/stores/cartStore";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getItemCount, toggleCart } = useCartStore();
+  const itemCount = getItemCount();
 
   const navLinks = [
     { name: "Inicio", href: "#inicio" },
@@ -39,11 +42,13 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="ghost" size="icon" className="relative" onClick={toggleCart}>
               <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-5 w-5 bg-accent text-accent-foreground text-xs rounded-full flex items-center justify-center font-bold">
-                0
-              </span>
+              {itemCount > 0 && (
+                <span className="absolute -top-1 -right-1 h-5 w-5 bg-accent text-accent-foreground text-xs rounded-full flex items-center justify-center font-bold">
+                  {itemCount}
+                </span>
+              )}
             </Button>
 
             {/* Mobile Menu Button */}
